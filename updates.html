@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Galaxy</title>
+</head>
+
+<body>
+    <style>
+      .accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.accessory-card {
+  background-color: #603636;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.accessory-card:hover {
+  transform: scale(1.1);
+}
+
+.accessory-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.accessory-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.accessory-card p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.accessory-card button {
+  background-color: #253ec0;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.accessory-card button:hover {
+  background-color: #5b5b5b;
+}
+
+/* Animation */
+.accessory-grid {
+  animation: accessory-animation 2s infinite;
+}
+
+@keyframes accessory-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+#error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+      
+      
+      
+        #contact {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group label {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #253ec0;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #5b5b5b;
+}
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #a9bfd1;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #11659a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            font-family: 'Georgia', serif;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #e8c4c4;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .game-card {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* transition: transform 0.2s ease;*/
+        }
+
+        .game-card:hover {
+            transform: scale(1.1);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .game-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .game-card p {
+            font-size: 14px;
+            color: #b3b3b3;
+           
+        }
+
+        .game-card button {
+            background-color: #253ec0;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .game-card button:hover {
+            background-color: #5b5b5b;
+        }
+
+        .update-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .update-card {
+            background-color: #653939;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .update-card:hover {
+            transform: scale(1.1);
+        }
+
+        .update-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .update-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .update-card p {
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+
+        .update-card button {
+            background-color: #253ec0;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .update-card button:hover {
+            background-color: #5b5b5b;
+        }
+
+        .contact-form {
+            padding: 20px;
+
+            .logo {
+                width: 5px;
+                /* adjust the width to your liking */
+                height: 50px;
+                /* adjust the height to your liking */
+                margin-right: 20px;
+                /* add some space between the logo and the title */
+            }
+
+            .header-container {
+
+                background-size: 50px 50px;
+                /* adjust the size to your liking */
+                background-position: left center;
+                /* adjust the position to your liking */
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+    <header>
+        <div class="header-container" style="background-image: url('https://www.google.com/search?sca_esv=fd7254ea229afa0d&sxsrf=ADLYWIKRkkpey4nlf2a46_O4nNeZpg-23Q:1726305408251&q=dog&udm=2&fbs=AEQNm0B8dVdIWR07uWWlg1TdKnNtA1cwMugrQsIKmAo5AEZHWRFlUeGLxYlhagMfUatSvHu3MSamP9Qd2SfjyZyVIdPFrZFmdorP0BQX-5QUvERZ7CgntLysKxPYR85LNkkQ-ODVQlzCBgHDwYGwBEtb1wyzIiqYOAGOFOhRLG73H-MUdJY1ZFjTgiSsk2gQgTHDHU_Mnn5ewYy4nGfZAENFgsXyYdMtYQ&sa=X&ved=2ahUKEwiGxofljMKIAxXFh68BHUN7DRMQtKgLegQIERAB&biw=1536&bih=730&dpr=1.25#vhid=Zcg-2Pqp8jFSiM&vssid=mosaic');">
+            <h1>Game Galaxy</h1>
+            <nav>
+                <ul>
+                  <li><a href="#games">Popular Games</a></li>
+                  <li><a href="#updates">Updates</a></li>
+                  <li><a href="#Accessories">Accessories</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
+                </ul>
+              </nav>
+        </div>
+    </header>
+    <section id="games">
+        <h2>Popular Games 🔥🔥🔥</h2>
+        <div class="game-grid">
+            <div class="game-card">
+                <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/e89d4daa4c4b221db99025d10b707775.png"
+                    alt="Game Image">
+                <h3>Subway surfurs</h3>
+                <p>Subway Surfers is an endless runner mobile game where players take on the role of a young graffiti
+                    artist who is caught in the act by a grumpy inspector and his dog. The game takes place in a
+                    vibrant, colorful subway environment, where the player must dodge trains, jump over obstacles, and
+                    collect coins while running through a series of train tracks.</p>
+                <button onclick="window.open('https://www.poki.com/en/g/subway-surfers')"
+                    style="background-color: #2c0ae9; color: #f4f4f6; padding: 5px 10px; font-size: 12px; border-radius: 5px; margin-top: 10px;">Play
+                    Now</button>
+            </div>
+            <div class="game-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Vc9sY4fdojQ1TR9FJTUDJVkgJD3-3oKIsw&s"
+                    alt="Stickman Gun Fire" style="width: 250px; height: 200px">
+                <h3>Stickman Gun Fire </h3>
+                <p>Stickman Gunfire is a fast-paced action shooter game where players control a stickman character armed
+                    with various weapons. The objective is to defeat waves of enemies by shooting, dodging, and using
+                    different combat strategies. The game's minimalist stickman art style contrasts with its intense
+                    gameplay, featuring dynamic gunfights, explosive action, and a wide variety of weapons to unlock and
+                    upgrade.</p>
+                <button onclick="window.open('https://poki.com/en/g/stick-merge')"
+                    style="background-color: #de23c5; color: #ffffff; padding: 5px 10px; font-size: 12px; border-radius: 5px; margin-top: 10px;">Play
+                    Now</button>
+
+            </div>
+            <div class="game-card">
+                <img src="https://www.c-sharpcorner.com/UploadFile/75a48f/tic-tac-toe-game-in-C-Sharp/Images/TicTacToe_HD_iTunesArtwork.png"
+                    alt="Tic Tac Toe" style="width: 250px; height: 200px">
+                <h3>Tic Tac Toe </h3>
+                <p>
+                    Tic-Tac-Toe is a classic two-player game played on a 3x3 grid. The objective is to be the first
+                    player to form a straight line of three of their own symbols, either "X" or "O," vertically,
+                    horizontally, or diagonally.
+
+                    Players take turns marking one empty square on the grid with their symbol, aiming to block their
+                    opponent while trying to complete their own line of three. The game is simple, quick to play, and
+                    often ends in a tie, or "draw," if neither player can form a line before the grid is filled.</p>
+                <button onclick="window.open('tic_tak_toe/index.htm', '_blank')"
+                    style="background-color: #de23c5; color: #ffffff; padding: 5px 10px; font-size: 12px; border-radius: 5px; margin-top: 10px;">Play
+                    Now</button>
+
+            </div>
+        </div>
+    </section>
+    <section id="updates">
+        <h2>Latest Updates</h2>
+        <div class="update-grid">
+            <div class="update-card">
+                <img src="https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/71d4d17edcd49703a5ea446cc0e588e6.jpg"
+                    alt="Update Image">
+                <h3>Rumors of a Grand Theft Auto 6 delay </h3>
+                <p>Rumors of a Grand Theft Auto 6 delay are swirling once again, but is there any validity behind them?
+                    GTA 6 is one of the most anticipated games of all-time and, as such, any kind of noteworthy rumor
+                    about the game immediately attracts a ton of attention like moths to a flame. Rockstar Games has
+                    barely talked about the game outside of revealing the trailer and setting for the game, meaning fans
+                    are left to feverishly speculate and cling on to any leaks they can find to get their fix. As such,
+                    things have gotten a bit out of control.
+
+                    It seems like every day there is a new rumor about Grand Theft Auto 6 and that has been the case for
+                    the better part of a decade. However, the first official GTA 6 trailer gave a concrete release
+                    window of 2025, which was seemingly narrowed to Fall 2025 by internal Take-Two documents. Rumors
+                    still abound, though, and those waNaiting for GTA are more or less conditioned to expect that
+                    information on the game could come at anytime from the most unlikely of sources.</p>
+            </div>
+            <div class="update-card">
+                <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/0a8a70ae0aa30c7ffe0958ac103fcc3d9f4b59b5-1920x1080.jpg?auto=format&fit=fill&q=80&w=1480"
+                    alt="Update Image">
+                <h3>Call of Duty
+                </h3>
+                <p>As of October 2023, Call of Duty has sold over 425 million copies and has 100 million monthly active
+                    players across all platforms. The franchise generated $30 billion in revenue by 2022. The series is
+                    verified by the Guinness World Records as the best-selling first-person shooter game series.</p>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+
+
+
+
+            </div>
+    </section>
+    
+    
+    <section id="Accessories"></section>
+        <h2>Accessories</h2>
+        <div class="contact-form">
+            <p style="text-align: center; font-size: 30px; position: relative; left: -620px;"> Gamepad</p>
+            <img src="https://m.media-amazon.com/images/I/51Kumm2y2mL._SX300_SY300_QL70_FMwebp_.jpg" alt="" style="position: relative; right: -580px; ">
+            <button onclick="window.open('https://www.amazon.in/Zebronics-FURY-Transparent-Illuminated-triggers/dp/B0CFTZQ8JB/ref=zg_bs_g_1375413031_d_sccl_4/259-4862211-7618448?psc=1')"
+                style="background-color: #674a63; color: #ffffff; padding: 5px 10px; font-size: 12px; border-radius: 5px; margin-top: 10px; position: relative; right: -715px; position: relative; top: -150px; width: 100px; height: 50px;">
+               BUY NOW</button>
+
+
+            <div class="contact-form">
+                <p style="text-align: center;"></p>
+                <h2>Finger Sleeves</h2>
+                <img src="https://m.media-amazon.com/images/I/71FmD-0OfHL._SX679_.jpg" alt="" style="position: relative; right: -580px; width: 320px;">
+                <button onclick="window.open('https://www.amazon.in/Vero-Forza-Pieces-Mobile-Technology/dp/B0B77MQD2M/ref=sr_1_10?crid=3MAMW4G8LBMCL&dib=eyJ2IjoiMSJ9.LiyXhNrbTxXB3xwcWH3Y2Tr-h8G8HWP0G6jCZM6duWXRB33my4pbJKgNQx-elDT-cd5HNCogX_zPX7Ns4p_plBLMxOvriJwOrRDDCI68DgUtSR_bKJzlMpNGyq0nU-VEuQxCtnIca2axPdqlVLG0bFZj5fbqxknmUhHKatLxes0QNbGBX8piPl2btHUOWjfFLROe8xhvUqxIOiSuNTmSgB2b_lEeoj_USS2TLpBzXRw.F3_icuj9l7NUyAUQurAO4D_bi1-esC-1sNIR7442xvY&dib_tag=se&keywords=finger+sleeves+for+gaming&qid=1726292110&sprefix=finger+slee%2Caps%2C232&sr=8-10')"
+                    style="background-color: #674a63; color: #ffffff; padding: 5px 10px; font-size: 12px; border-radius: 5px; margin-top: 10px; position: relative; right: -715px; position: relative; top: -150px; width: 100px; height: 50px;">
+                   BUY NOW</button>
+
+
+
+
+                   <p style="text-align: center;"></p>
+                   <h2>Mobile Cooler</h2>
+                   <img src="https://m.media-amazon.com/images/I/61ii5WvRTgL._SX522_.jpg" alt="" style="position: relative; right: -580px; width: 320px;">
+                   <button onclick="window.open('https://www.amazon.in/MOBILIFE-Magnetic-Semiconductor-Technology-Radiator/dp/B0D1JJ1S9Q/ref=sr_1_1_sspa?crid=A4K4K6PM5QXN&dib=eyJ2IjoiMSJ9.hlSYnoYnkgHRynBUxmO3JeQqg28NpEtibRmRnVbdvZQexLg4bEk9ajSteMlIRTaQcjSqGUt3ernFoh_6Y4IgGbpeaCdO1uT02opZ9J_AKIKkJb8BMR1c2qjiUYlvVZ8B9SSVI7rjclb66GBZZVRLwgt9CwtlUvMBDXnBJDX7YdmQuryrBjr-31tjhHmE72KKdHwq_CMUgp3TAP0m9si61O4NyXpuO3uHnY4LC_KWDIg.iT9Q9CFui4Gn2FG7gantVpdppd6BE8cYWQaTP4TGI8w&dib_tag=se&keywords=mobile+cooler+for+gaming&qid=1726292897&sprefix=mobile+co%2Caps%2C298&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1')"
+                       style="background-color: #674a63; color: #ffffff; padding: 5px 10px; font-size: 12px; border-radius: 5px; margin-top: 10px; position: relative; right: -715px; position: relative; top: -150px; width: 100px; height: 50px;">
+                      BUY NOW</button>
+
+
+
+                      <p style="text-align: center;"></p>
+                      <h2>RGB Headphone</h2>
+                      <img src="https://m.media-amazon.com/images/I/71VR6c3j2bL._SX679_.jpg" alt="" style="position: relative; right: -580px; width: 320px;">
+                      <button onclick="window.open('https://www.amazon.in/Zebronics-PRO-Headphone-Neodymium-Suspension/dp/B0B5RMKMJL/ref=sr_1_4?crid=12TC6SCNSSIX3&dib=eyJ2IjoiMSJ9.pZnsu4ifTaEreI1X5EYpDPtvPGrS2fY0xHncGxaVbejbJN5wCpt6mMxqLOscg21SA4QcUzf_jcMEVPkCMkCG2aFi8qN4B_p8bOvbMLOlUKaTbBFxPVPuDkXMPEUiFgwsPXlwbM3N6BRFBwgD-NFk1G7btLDCleK6sUx2i9nlS5YpNTXjQ2MFGxnnGPSdAlKKw0UbqfUa1ps9R5-sRoijbePDk523KnF4HZIOtVGrFD8.PMfg_xMHTb7D1OcOTMMTP14AOddFxBcwnO9USQrsz-A&dib_tag=se&keywords=gaming%2Bheadphones%2Bwith%2Bmic%2Brgb&qid=1726293439&sprefix=gaming%2Bheadphones%2Bwith%2Bmic%2Brgb%2Caps%2C294&sr=8-4&th=1')"
+                          style="background-color: #674a63; color: #ffffff; padding: 5px 10px; font-size: 12px; border-radius: 5px; margin-top: 10px; position: relative; right: -715px; position: relative; top: -150px; width: 100px; height: 50px;">
+                         BUY NOW</button>
+   
+    <footer style="position: relative; bottom: -615px;">
+        <p style="text-align: center; ">&copy; 2024 Game Galaxy. All rights reserved.
+            created By Hackers Hub
+        </p>
+    </footer>
+    <script>
+        // Create a div element to hold the popup
+        var popup = document.createElement("div");
+        popup.id = "cookie-popup";
+        popup.style.position = "fixed";
+        popup.style.top = "0";
+        popup.style.left = "0";
+        popup.style.width = "100%";
+        popup.style.height = "100%";
+        popup.style.background = "rgba(0, 0, 0, 0.5)";
+        popup.style.zIndex = "1000";
+        popup.style.display = "none";
+
+        // Create a container for the popup content
+        var popupContent = document.createElement("div");
+        popupContent.id = "cookie-popup-content";
+        popupContent.style.position = "absolute";
+        popupContent.style.top = "50%";
+        popupContent.style.left = "50%";
+        popupContent.style.transform = "translate(-50%, -50%)";
+        popupContent.style.background = "#fff";
+        popupContent.style.padding = "20px";
+        popupContent.style.borderRadius = "10px";
+        popupContent.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
+
+        // Create a heading for the popup
+        var heading = document.createElement("h2");
+        heading.textContent = "Cookie Policy";
+
+        // Create a paragraph to explain the cookie policy
+        var paragraph = document.createElement("p");
+        paragraph.textContent = "This website uses cookies to improve your experience. By continuing to use this website, you agree to our cookie policy.";
+
+        // Create a button to accept cookies
+        var acceptButton = document.createElement("button");
+        acceptButton.textContent = "Accept Cookies";
+        acceptButton.style.background = "#4CAF50";
+        acceptButton.style.color = "#fff";
+        acceptButton.style.padding = "10px 20px";
+        acceptButton.style.borderRadius = "5px";
+        acceptButton.style.cursor = "pointer";
+
+        // Add an event listener to the accept button
+        acceptButton.addEventListener("click", function () {
+            // Set a cookie to indicate that the user has accepted cookies
+            document.cookie = "cookie-accepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            // Hide the popup
+            popup.style.display = "none";
+        });
+
+        // Add the popup content to the popup container
+        popupContent.appendChild(heading);
+        popupContent.appendChild(paragraph);
+        popupContent.appendChild(acceptButton);
+
+        // Add the popup container to the popup
+        popup.appendChild(popupContent);
+
+        // Add the popup to the body of the document
+        document.body.appendChild(popup);
+
+        // Check if the user has already accepted cookies
+        if (!document.cookie.match(/cookie-accepted=true/)) {
+            // Show the popup
+            popup.style.display = "block";
+        }
+    
+    // Get the input field and the output element
+const ageInput = document.getElementById("age");
+const outputElement = document.getElementById("output");
+
+// Add an event listener to the input field
+ageInput.addEventListener("input", checkAge);
+
+// Function to check the age
+function checkAge() {
+  const age = parseInt(ageInput.value);
+  if (age > 5) {
+    outputElement.textContent = "You are eligible to access this site";
+  } else {
+    outputElement.textContent = "You are not eligible to access this site";
+  }
+}
+    
+    </script>
+
+
+<section id="accessories">
+    <h2>Accessories</h2>
+    <div class="accessory-grid">
+      <!-- Add accessory cards here -->
+    </div>
+  
+    <section id="accessories">
+        <h2>Important Links</h2>
+        <div class="accessory-grid">
+          <div class="accessory-card">
+            <img src="https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/71d4d17edcd49703a5ea446cc0e588e6.jpg" alt="Trailer">
+            <h3>GTA VI</h3>
+            <p>Click The Watch Now Button To watch</p>
+            <button onclick="window.open('https://www.youtube.com/watch?v=QdBZY2fkU-0')">Watch Now</button>
+          </div>
+          <div class="accessory-card">
+            <img src="https://images.indianexpress.com/2021/01/FAU-G-launch-.jpg?w=414" alt="Accessory Image">
+            <h3>FAU-G</h3>
+            <p>Click To Watch The Trailer..</p>
+            <button onclick="window.open('https://www.youtube.com/watch?v=_E0ss1Tu01M')">Watch Now</button>
+          </div>
+          <!-- Add more accessory cards here -->
+        </div>
+      </section>
+
+
+</section>
+
+</body>
+
+</html>
